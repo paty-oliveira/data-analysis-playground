@@ -1,2 +1,7 @@
 # data-analysis-playground
-Repository for Data Analysis experimentations
+
+This repository contains a set of Jupyter Notebook templates for Data analysis, such as:
+
+- Stock Analysis
+  - [Fundamental Analysis](stock-analysis/fundamental-analysis/index.ipynb)
+
