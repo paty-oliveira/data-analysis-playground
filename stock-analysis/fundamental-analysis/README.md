@@ -51,7 +51,7 @@ basic company's information such as:
 - Commonly used ratios like EPS, Dividend Yield, P/E, Payout Ratio, Market Capitalisation, and more.
 
 This is the complete list of all keys:
-``` 
+```python
 [
     "address1",
     "city",
@@ -206,13 +206,101 @@ In the following example, the resulting Dataframe contains historical prices fro
 until today, with daily granularity. 
 
 ```python
-historic_prices = company.history(period="max", interval="1d")
-historic_prices.head(10)
+historical_prices = company.history(period="max", interval="1d")
+historical_prices.head(10)
 ```
 ![Screenshot of Historic Prices](./img/historic_prices.png)
 
-
 ## Balance Sheet
+Balance sheet can be access through `balance_sheet` property. This property returns a `pandas` Dataframe containing 4 columns,
+representing the dates of annual results' release; and 73 columns with all details about assets and liabilities.
+
+```python
+balance_sheet = company.balance_sheet
+balance_sheet.head(10)
+```
+![Screenshot of Balance Sheet](./img/balance_sheet.png)
+
+This is the complete list of fields:
+```python
+[
+    "Ordinary Shares Number",
+    "Share Issued",
+    "Net Debt",
+    "Total Debt",
+    "Tangible Book Value",
+    "Invested Capital",
+    "Working Capital",
+    "Net Tangible Assets",
+    "Capital Lease Obligations",
+    "Common Stock Equity",
+    "Total Capitalization",
+    "Total Equity Gross Minority Interest",
+    "Stockholders Equity",
+    "Gains Losses Not Affecting Retained Earnings",
+    "Other Equity Adjustments",
+    "Retained Earnings",
+    "Capital Stock",
+    "Common Stock",
+    "Total Liabilities Net Minority Interest",
+    "Total Non Current Liabilities Net Minority Interest",
+    "Other Non Current Liabilities",
+    "Tradeand Other Payables Non Current",
+    "Non Current Deferred Liabilities",
+    "Non Current Deferred Revenue",
+    "Non Current Deferred Taxes Liabilities",
+    "Long Term Debt And Capital Lease Obligation",
+    "Long Term Capital Lease Obligation",
+    "Long Term Debt",
+    "Current Liabilities",
+    "Other Current Liabilities",
+    "Current Deferred Liabilities",
+    "Current Deferred Revenue",
+    "Current Debt And Capital Lease Obligation",
+    "Current Debt",
+    "Pensionand Other Post Retirement Benefit Plans Current",
+    "Payables And Accrued Expenses",
+    "Payables",
+    "Total Tax Payable",
+    "Income Tax Payable",
+    "Accounts Payable",
+    "Total Assets",
+    "Total Non Current Assets",
+    "Other Non Current Assets",
+    "Investments And Advances",
+    "Long Term Equity Investment",
+    "Goodwill And Other Intangible Assets",
+    "Other Intangible Assets",
+    "Goodwill",
+    "Net PPE",
+    "Accumulated Depreciation",
+    "Gross PPE",
+    "Leases",
+    "Other Properties",
+    "Machinery Furniture Equipment",
+    "Buildings And Improvements",
+    "Land And Improvements",
+    "Properties",
+    "Current Assets",
+    "Other Current Assets",
+    "Hedging Assets Current",
+    "Inventory",
+    "Finished Goods",
+    "Work In Process",
+    "Raw Materials",
+    "Receivables",
+    "Accounts Receivable",
+    "Allowance For Doubtful Accounts Receivable",
+    "Gross Accounts Receivable",
+    "Cash Cash Equivalents And Short Term Investments",
+    "Other Short Term Investments",
+    "Cash And Cash Equivalents",
+    "Cash Equivalents",
+    "Cash Financial",
+]
+```
+
+
 
 ## Income Statement
 
