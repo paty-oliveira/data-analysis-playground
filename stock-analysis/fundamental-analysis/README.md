@@ -213,7 +213,7 @@ historical_prices.head(10)
 
 ## Balance Sheet
 Balance sheet can be access through `balance_sheet` property. This property returns a `pandas` Dataframe containing 4 columns,
-representing the dates of annual results' release; and 73 columns with all details about assets and liabilities.
+representing the dates of the last four years of annual results releases; and 73 rows with all details about assets and liabilities.
 
 ```python
 balance_sheet = company.balance_sheet
@@ -221,7 +221,7 @@ balance_sheet.head(10)
 ```
 ![Screenshot of Balance Sheet](./img/balance_sheet.png)
 
-This is the complete list of fields:
+This is the complete list of fields available for analysis of Balance Sheet:
 ```python
 [
     "Ordinary Shares Number",
@@ -300,10 +300,143 @@ This is the complete list of fields:
 ]
 ```
 
-
-
 ## Income Statement
+Income Statement can be accessed through `income_stmt` property. This property returns a `pandas` Dataframe containing 4 columns,
+representing the dates of the last four years of annual results releases; and 48 rows with information about earnings, 
+revenue and expenses.
+
+```python
+income_stmt = company.income_stmt
+income_stmt.head(10)
+```
+
+![Screenshot of Income Statement](img/income_stmt.png)
+
+This is the complete list of fields available for Income Statement analysis:
+```python
+[
+    "Tax Effect Of Unusual Items",
+    "Tax Rate For Calcs",
+    "Normalized EBITDA",
+    "Total Unusual Items",
+    "Total Unusual Items Excluding Goodwill",
+    "Net Income From Continuing Operation Net Minority Interest",
+    "Reconciled Depreciation",
+    "Reconciled Cost Of Revenue",
+    "EBITDA",
+    "EBIT",
+    "Net Interest Income",
+    "Interest Expense",
+    "Interest Income",
+    "Normalized Income",
+    "Net Income From Continuing And Discontinued Operation",
+    "Total Expenses",
+    "Total Operating Income As Reported",
+    "Diluted Average Shares",
+    "Basic Average Shares",
+    "Diluted EPS",
+    "Basic EPS",
+    "Diluted NI Availto Com Stockholders",
+    "Net Income Common Stockholders",
+    "Net Income",
+    "Net Income Including Noncontrolling Interests",
+    "Net Income Continuous Operations",
+    "Tax Provision",
+    "Pretax Income",
+    "Other Income Expense",
+    "Other Non Operating Income Expenses",
+    "Special Income Charges",
+    "Write Off",
+    "Restructuring And Mergern Acquisition",
+    "Gain On Sale Of Security",
+    "Net Non Operating Interest Income Expense",
+    "Interest Expense Non Operating",
+    "Interest Income Non Operating",
+    "Operating Income",
+    "Operating Expense",
+    "Research And Development",
+    "Selling General And Administration",
+    "Selling And Marketing Expense",
+    "General And Administrative Expense",
+    "Other Gand A",
+    "Gross Profit",
+    "Cost Of Revenue",
+    "Total Revenue",
+    "Operating Revenue",
+]
+```
 
 ## Cash Flow
+Cash Flow can be accessed through `cashflow` property. This property returns a `pandas` Dataframe containing 4 columns,
+representing the dates of the last four years of annual results releases; and 54 rows with information about the most
+used ratios and metrics to assess the cash flow of a company.
+
+```python
+cashflow = company.cash_flow
+cashflow.head(10)
+```
+
+![Screenshot of Cashflow](img/cashflow.png)
+
+This is the complete list of fields available for Cash Flow analysis:
+
+```python
+[
+    "Free Cash Flow",
+    "Repurchase Of Capital Stock",
+    "Repayment Of Debt",
+    "Issuance Of Debt",
+    "Issuance Of Capital Stock",
+    "Capital Expenditure",
+    "End Cash Position",
+    "Beginning Cash Position",
+    "Effect Of Exchange Rate Changes",
+    "Changes In Cash",
+    "Financing Cash Flow",
+    "Cash Flow From Continuing Financing Activities",
+    "Net Other Financing Charges",
+    "Cash Dividends Paid",
+    "Common Stock Dividend Paid",
+    "Net Common Stock Issuance",
+    "Common Stock Payments",
+    "Common Stock Issuance",
+    "Net Issuance Payments Of Debt",
+    "Net Short Term Debt Issuance",
+    "Net Long Term Debt Issuance",
+    "Long Term Debt Payments",
+    "Long Term Debt Issuance",
+    "Investing Cash Flow",
+    "Cash Flow From Continuing Investing Activities",
+    "Net Other Investing Changes",
+    "Net Investment Purchase And Sale",
+    "Sale Of Investment",
+    "Purchase Of Investment",
+    "Net Business Purchase And Sale",
+    "Purchase Of Business",
+    "Net PPE Purchase And Sale",
+    "Purchase Of PPE",
+    "Operating Cash Flow",
+    "Cash Flow From Continuing Operating Activities",
+    "Change In Working Capital",
+    "Change In Other Working Capital",
+    "Change In Other Current Liabilities",
+    "Change In Other Current Assets",
+    "Change In Payables And Accrued Expense",
+    "Change In Payable",
+    "Change In Account Payable",
+    "Change In Inventory",
+    "Change In Receivables",
+    "Changes In Account Receivables",
+    "Stock Based Compensation",
+    "Deferred Tax",
+    "Deferred Income Tax",
+    "Depreciation Amortization Depletion",
+    "Depreciation And Amortization",
+    "Depreciation",
+    "Operating Gains Losses",
+    "Gain Loss On Investment Securities",
+    "Net Income From Continuing Operations",
+]
+```
 
 ## Ratios
