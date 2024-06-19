@@ -440,3 +440,11 @@ This is the complete list of fields available for Cash Flow analysis:
 ```
 
 ## Ratios
+The most used ratios can be easily access through `info` property. They are the following:
+
+- `trailingPE` - Price Earnings Ratio (_PER_)
+- `dividendYield` - Dividend Yield (_DY_) 
+- `payoutRatio` - Payout Ratio (_POR_)
+- `trailingEps` - Earnings Per Share (_EPS_)
+- `returnOnAssets` - Return on Assets (_ROA_)
+- `returnOnEquity` - Return on Equity (_ROE_)
